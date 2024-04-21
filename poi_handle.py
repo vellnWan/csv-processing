@@ -8,8 +8,8 @@ def find_encoding(fname):
     result = chardet.detect(r_file)  # 利用chardet库找出文件的编码方式
     charenc = result['encoding']  # 提取出编码方式
     return charenc  # 返回文件的编码方式
-source_directory = 'E:\\poi\\'  # 设置源文件的路径
-destination_directory = 'E:\\POI1\\'  # 设置目标文件的路径
+source_directory = '输入路径'  # 设置源文件的路径
+destination_directory = '输出路径'  # 设置目标文件的路径
 if not os.path.exists(destination_directory):  # 查询是否已存在目标路径
     os.makedirs(destination_directory)  # 如果不存在，则创建目标路径
 count = 1  # 设置初始处理的文件计数为1
