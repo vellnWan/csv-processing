@@ -4,14 +4,14 @@ import geopandas as gpd
 from shapely.geometry import Point
 from pyproj import CRS
 # 指定你所有csv文件的文件夹
-input_folder = "E:\\POI1\\"
-output_folder = "E:\\poi\\"
+input_folder = "输入路径"
+output_folder = "输出路径"
 # 遍历文件夹中的每个CSV文件
 for filename in os.listdir(input_folder):
     if filename.endswith(".csv"):
         data = pd.read_csv(os.path.join(input_folder, filename))
         # 假设你的csv文件中有'lat'和'lon'字段
-        geometry = [Point(xy) for xy in zip(data['location_x'], data['location_y'])]
+        geometry = [Point(xy) for xy in zip(data['lat'], data['lon'])]
         geo_df = gpd.GeoDataFrame(data, geometry=geometry)
         # 提供一个代码，将WGS84坐标系(EPSG：4326)应用于你的GeoDataFrame
         geo_df.set_crs("epsg:4326", inplace=True)
