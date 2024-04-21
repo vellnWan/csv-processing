@@ -9,9 +9,9 @@ def find_encoding(fname):
     charenc = result['encoding']
     return charenc
 # 指定源文件所在的目录
-source_directory = 'E:\\POI1\\'
+source_directory = '输入路径'
 # 指定保存新生成文件的目录
-new_directory = 'E:\\poi\\'
+new_directory = '输出路径'
 # 确保新路径存在，如果不存在，创建它
 if not os.path.exists(new_directory):
     os.makedirs(new_directory)
