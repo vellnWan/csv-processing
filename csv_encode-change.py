@@ -27,8 +27,8 @@ def main(directory_path, new_directory, encodings, cols_to_copy):
             new_file_name = file_name.replace('.csv', 'new.csv')
             copy_columns(full_file_path, new_directory, new_file_name, encodings, cols_to_copy)
 if __name__ == "__main__":
-    directory_path = 'D:\\POI'
-    new_directory = 'E:\\poi'
+    directory_path = '目标路径'
+    new_directory = '输出路径'
     encodings = ['utf-8', 'gb2312', 'gbk'] # 可能的编码方式
-    columns_to_copy = ['name', 'location','type']  # 需要复制的列名
+    columns_to_copy = ['name1', 'name2','name3']  # 需要复制的列名
     main(directory_path, new_directory, encodings, columns_to_copy)
